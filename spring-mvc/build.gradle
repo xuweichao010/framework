@@ -2,11 +2,17 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.boot:spring-boot-starter-parent:2.2.13.RELEASE"
+        mavenBom "org.springframework.boot:spring-boot-starter-parent:2.4.3"
     }
 }
 dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') //springboot快速启动组件
     implementation("org.springframework.boot:spring-boot-starter-web")     //web
     implementation("io.springfox:springfox-boot-starter:3.0.0")  //快速构建API
+    implementation("javax.validation:validation-api")
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    compileOnly("org.springframework.boot:spring-boot-configuration-processor")
+    compileOnly("org.springframework.boot:spring-boot-autoconfigure")
+
 }

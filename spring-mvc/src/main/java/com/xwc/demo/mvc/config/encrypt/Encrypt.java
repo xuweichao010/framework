@@ -1,4 +1,4 @@
-package com.xwc.demo.mvc.config.mvc;
+package com.xwc.demo.mvc.config.encrypt;
 
 
 import java.lang.annotation.ElementType;
@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  */
 @Target({ElementType.PARAMETER, ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface EncryptBody {
+public @interface Encrypt {
 
-    boolean required() default true;
+
 }
