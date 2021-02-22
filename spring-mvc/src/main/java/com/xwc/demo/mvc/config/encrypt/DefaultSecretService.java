@@ -5,31 +5,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 /**
- * 创建人：徐卫超 CC
- * 时间：2021/2/21 20:12
- * 备注：
+ * 创建人：徐卫超 CC 时间：2021/2/21 20:12 备注：
  */
-public class DefaultSecretService implements SecretService{
-    @Autowired
-    private List<>
+public class DefaultSecretService implements SecretService {
+
 
     @Override
-    public Object get(String keyId) {
+    public Secret get(String keyId) {
         return null;
     }
 
     @Override
-    public Object random() {
+    public Secret random() {
         return null;
     }
 
     @Override
-    public Object random(SecretLevel level) {
+    public Secret random(SecretLevel level) {
         return null;
     }
 
     @Override
-    public List<Object> list() {
+    public List<Secret> list() {
         return null;
     }
 }

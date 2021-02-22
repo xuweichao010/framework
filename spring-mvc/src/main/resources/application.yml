@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: dev
   mvc:
     encrypt:
       headName: x_security

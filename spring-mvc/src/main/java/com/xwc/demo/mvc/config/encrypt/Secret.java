@@ -3,9 +3,9 @@ package com.xwc.demo.mvc.config.encrypt;
 import java.util.concurrent.ScheduledFuture;
 
 /**
- * 创建人：徐卫超 CC
- * 时间：2021/2/21 20:13
- * 备注：
+ * @创建人 徐卫超 CC
+ * @时间 2021/2/21 20:13
+ * @备注
  */
 public interface Secret {
 
@@ -14,7 +14,7 @@ public interface Secret {
      *
      * @return
      */
-    SecretService.SecretLevel level();
+    SecretLevel level();
 
     /**
      * 秘钥的ID
