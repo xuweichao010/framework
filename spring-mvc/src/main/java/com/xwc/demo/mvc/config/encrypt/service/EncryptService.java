@@ -1,4 +1,6 @@
-package com.xwc.demo.mvc.config.encrypt;
+package com.xwc.demo.mvc.config.encrypt.service;
+
+import com.xwc.demo.mvc.config.encrypt.Encrypt;
 
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.server.ServerHttpRequest;

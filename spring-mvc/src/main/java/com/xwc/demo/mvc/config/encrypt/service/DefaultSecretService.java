@@ -1,6 +1,6 @@
-package com.xwc.demo.mvc.config.encrypt;
+package com.xwc.demo.mvc.config.encrypt.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.xwc.demo.mvc.config.encrypt.model.Secret;
 
 import java.util.List;
 

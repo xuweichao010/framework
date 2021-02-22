@@ -1,4 +1,4 @@
-package com.xwc.demo.mvc.config.encrypt;
+package com.xwc.demo.mvc.config.encrypt.model;
 
 /**
  * 加密等级 理论上设计为等级越高数据安全系数越高

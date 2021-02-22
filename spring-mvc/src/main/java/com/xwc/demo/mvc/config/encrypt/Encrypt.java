@@ -1,6 +1,8 @@
 package com.xwc.demo.mvc.config.encrypt;
 
 
+import com.xwc.demo.mvc.config.encrypt.model.SecretLevel;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

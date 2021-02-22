@@ -1,4 +1,4 @@
-package com.xwc.demo.mvc.config.encrypt;
+package com.xwc.demo.mvc.config.encrypt.model;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpInputMessage;

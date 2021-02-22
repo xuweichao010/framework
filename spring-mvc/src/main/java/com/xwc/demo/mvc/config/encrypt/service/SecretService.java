@@ -1,4 +1,6 @@
-package com.xwc.demo.mvc.config.encrypt;
+package com.xwc.demo.mvc.config.encrypt.service;
+
+import com.xwc.demo.mvc.config.encrypt.model.Secret;
 
 import java.util.List;
 

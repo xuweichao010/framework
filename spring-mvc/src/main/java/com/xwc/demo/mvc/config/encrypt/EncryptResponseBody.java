@@ -1,5 +1,7 @@
 package com.xwc.demo.mvc.config.encrypt;
 
+import com.xwc.demo.mvc.config.encrypt.service.EncryptService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;

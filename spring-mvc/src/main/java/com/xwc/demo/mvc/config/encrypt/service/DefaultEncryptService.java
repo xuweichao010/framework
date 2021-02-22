@@ -1,4 +1,10 @@
-package com.xwc.demo.mvc.config.encrypt;
+package com.xwc.demo.mvc.config.encrypt.service;
+
+import com.xwc.demo.mvc.config.encrypt.Encrypt;
+import com.xwc.demo.mvc.config.encrypt.model.EncryptHttpInputMessage;
+import com.xwc.demo.mvc.config.encrypt.EncryptProperty;
+import com.xwc.demo.mvc.config.encrypt.model.Secret;
+import com.xwc.demo.mvc.config.encrypt.model.SecretLevel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.EnvironmentAware;
@@ -10,9 +16,7 @@ import org.springframework.http.server.ServerHttpResponse;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Base64;
 import java.util.List;
-import java.util.Map;
 
 
 public class DefaultEncryptService implements EncryptService, EnvironmentAware {

@@ -1,6 +1,4 @@
-package com.xwc.demo.mvc.config.encrypt;
-
-import java.util.concurrent.ScheduledFuture;
+package com.xwc.demo.mvc.config.encrypt.model;
 
 /**
  * @创建人 徐卫超 CC

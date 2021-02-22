@@ -20,7 +20,7 @@ public class EncryptProperty {
     private HashSet<String> selfAdaption = new HashSet<>(Arrays.asList("dev"));
 
     /**
-     * 用于传输秘钥信息标识
+     * 用于传输秘钥信息请求体
      */
     private String headName = "X_Encrypt";
 
