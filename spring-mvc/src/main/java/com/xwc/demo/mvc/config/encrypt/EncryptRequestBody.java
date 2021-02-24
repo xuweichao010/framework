@@ -34,7 +34,7 @@ public class EncryptRequestBody extends RequestBodyAdviceAdapter {
     @Override
     public HttpInputMessage beforeBodyRead(HttpInputMessage inputMessage, MethodParameter parameter, Type targetType,
             Class<? extends HttpMessageConverter<?>> converterType) {
-        Encrypt encrypt = parameter.getMethodAnnotation(Encrypt.class);
+        Encrypt encrypt = parameter.getParameterAnnotation(Encrypt.class);
         if (encrypt != null) {
             return encryptService.decoder(inputMessage, encrypt);
         }

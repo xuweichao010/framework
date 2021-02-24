@@ -19,7 +19,7 @@ public class AppWebMvcConfig implements WebMvcConfigurer {
      */
     @Override
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
-        argumentResolvers.add(new EncryptBodyMethodProcessor());
+
     }
 
 }

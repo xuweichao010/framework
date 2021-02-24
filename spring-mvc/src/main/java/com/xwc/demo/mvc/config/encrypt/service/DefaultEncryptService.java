@@ -4,7 +4,7 @@ import com.xwc.demo.mvc.config.encrypt.Encrypt;
 import com.xwc.demo.mvc.config.encrypt.model.EncryptHttpInputMessage;
 import com.xwc.demo.mvc.config.encrypt.EncryptProperty;
 import com.xwc.demo.mvc.config.encrypt.model.Secret;
-import com.xwc.demo.mvc.config.encrypt.model.SecretLevel;
+import com.xwc.demo.mvc.config.encrypt.model.SecretType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.EnvironmentAware;
@@ -33,7 +33,7 @@ public class DefaultEncryptService implements EncryptService, EnvironmentAware {
         List<String> secretList = inputMessage.getHeaders().get(encryptProperty.getHeadName());
         if (secretList == null || secretList.isEmpty()) {
             // 自适应环境允许数据不加密传输
-            if (encryptProperty.getSelfAdaption().contains(profilesActive)) {
+            if (encryptProperty.getSelfAdaptionProfiles().contains(profilesActive)) {
                 return inputMessage;
             } else {
                 throw new RuntimeException("未发现数据秘钥信息");
@@ -41,7 +41,10 @@ public class DefaultEncryptService implements EncryptService, EnvironmentAware {
         }
         String secretId = secretList.get(0);
         Secret secret = secretService.get(secretId);
-        if (encrypt.level() != SecretLevel.AUTO && secret.level() != encrypt.level()) {
+        if (secret == null) {
+            throw new RuntimeException("秘钥数据不存在");
+        }
+        if (encrypt.type() != SecretType.AUTO && secret.type() != encrypt.type()) {
             throw new RuntimeException("秘钥校验错误");
         }
         try {

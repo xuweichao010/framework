@@ -7,17 +7,20 @@ package com.xwc.demo.mvc.config.encrypt.model;
  */
 public interface Secret {
 
-    /**
-     * 秘钥的级别
-     *
-     * @return
-     */
-    SecretLevel level();
+    String DEFAULT_CHARSET = "utf-8";
+
 
     /**
      * 秘钥的ID
      */
     String secretId();
+
+    /**
+     * 加密类型
+     *
+     * @return
+     */
+    SecretType type();
 
     /**
      * 加密信息

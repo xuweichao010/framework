@@ -22,18 +22,14 @@ public class EncryptHttpInputMessage implements HttpInputMessage {
         this.headers = headers;
     }
 
-    public EncryptHttpInputMessage(HttpInputMessage httpInputMessage) throws IOException {
-        this.body = httpInputMessage.getBody();
-        this.headers = httpInputMessage.getHeaders();
-    }
 
     @Override
     public InputStream getBody() throws IOException {
-        return null;
+        return body;
     }
 
     @Override
     public HttpHeaders getHeaders() {
-        return null;
+        return headers;
     }
 }

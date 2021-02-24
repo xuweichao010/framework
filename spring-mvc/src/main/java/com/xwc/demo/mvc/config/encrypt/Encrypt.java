@@ -1,7 +1,7 @@
 package com.xwc.demo.mvc.config.encrypt;
 
 
-import com.xwc.demo.mvc.config.encrypt.model.SecretLevel;
+import com.xwc.demo.mvc.config.encrypt.model.SecretType;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -14,5 +14,11 @@ import java.lang.annotation.Target;
 @Target({ElementType.PARAMETER, ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Encrypt {
-    SecretLevel level() default SecretLevel.NONE;
+
+    /**
+     * 自动选择加密方案
+     *
+     * @return
+     */
+    SecretType type() default SecretType.AUTO;
 }

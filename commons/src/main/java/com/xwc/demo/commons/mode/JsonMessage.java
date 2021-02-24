@@ -1,7 +1,7 @@
 package com.xwc.demo.commons.mode;
 
-import exceptions.BusinessException;
-import exceptions.SystemException;
+import com.xwc.demo.commons.exceptions.BusinessException;
+import com.xwc.demo.commons.exceptions.SystemException;
 import io.swagger.annotations.ApiModelProperty;
 
 @SuppressWarnings("unused")

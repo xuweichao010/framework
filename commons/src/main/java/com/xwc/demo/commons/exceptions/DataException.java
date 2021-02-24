@@ -1,4 +1,4 @@
-package exceptions;
+package com.xwc.demo.commons.exceptions;
 
 /**
  * 创建人：徐卫超

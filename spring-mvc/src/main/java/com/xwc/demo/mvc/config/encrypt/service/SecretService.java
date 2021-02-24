@@ -1,13 +1,12 @@
 package com.xwc.demo.mvc.config.encrypt.service;
 
 import com.xwc.demo.mvc.config.encrypt.model.Secret;
+import com.xwc.demo.mvc.config.encrypt.model.SecretType;
 
 import java.util.List;
 
 /**
- * 创建人：徐卫超 CC
- * 时间：2021/2/21 19:54
- * 备注：
+ * 创建人：徐卫超 CC 时间：2021/2/21 19:54 备注：
  */
 public interface SecretService {
 
@@ -19,12 +18,6 @@ public interface SecretService {
      */
     Secret get(String keyId);
 
-    /**
-     * 随机一个秘钥信息
-     *
-     * @return
-     */
-    Secret random();
 
     /**
      * 获取一个有加密等级的秘钥
@@ -32,7 +25,7 @@ public interface SecretService {
      * @param level
      * @return
      */
-    Secret random(SecretLevel level);
+    Secret random(SecretType level);
 
     /**
      * 获取系统中所有的秘钥信息

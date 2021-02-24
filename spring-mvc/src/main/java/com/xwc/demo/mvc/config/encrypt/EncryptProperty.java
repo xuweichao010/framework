@@ -16,7 +16,7 @@ public class EncryptProperty {
      *
      * @return
      */
-    private HashSet<String> selfAdaption = new HashSet<>(Arrays.asList("dev"));
+    private HashSet<String> selfAdaptionProfiles = new HashSet<>(Arrays.asList("dev"));
 
     /**
      * 用于传输秘钥信息请求体

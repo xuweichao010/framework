@@ -1,5 +1,6 @@
 package com.xwc.demo.mvc.controller;
 
+import com.xwc.demo.mvc.config.encrypt.Encrypt;
 import com.xwc.demo.mvc.controller.user.UserDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,7 +23,7 @@ public class UserController {
 
     @PostMapping
     @ApiOperation("新增用户")
-    public Object update(@RequestBody UserDto userDto, HttpServletRequest request) {
+    public Object update(@RequestBody @Encrypt UserDto userDto) {
 
         return userDto;
     }

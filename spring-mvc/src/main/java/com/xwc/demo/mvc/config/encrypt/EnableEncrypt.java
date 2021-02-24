@@ -9,15 +9,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 作者：CC
- * 时间：2020/8/31 9:04
- * 描述：支持系统加解密方案
+ * 作者：CC 时间：2020/8/31 9:04 描述：支持系统加解密方案
  */
 @Target({ElementType.TYPE,})
 @Retention(RetentionPolicy.RUNTIME)
-@Import(EncryptBeanDefinitionRegistrar.class)
+@Import(EncryptConfig.class)
 public @interface EnableEncrypt {
-
-
-    String[] selfAdaption() default {};
 }
