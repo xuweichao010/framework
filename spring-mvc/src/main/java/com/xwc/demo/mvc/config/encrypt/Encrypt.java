@@ -23,5 +23,5 @@ public @interface Encrypt {
     /**
      * 自适应功能 true:开启  false:关闭
      */
-    boolean selfAdaption() default false;
+    boolean selfAdaption() default true;
 }

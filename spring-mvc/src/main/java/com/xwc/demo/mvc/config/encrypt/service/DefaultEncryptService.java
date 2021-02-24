@@ -65,9 +65,10 @@ public class DefaultEncryptService implements EncryptService, EnvironmentAware {
     @Override
     public Object encoder(Object body, ServerHttpRequest request, ServerHttpResponse response, Encrypt encrypt) {
         List<String> headParaList = request.getHeaders().get(encryptProperty.getHeadName());
-        if (headParaList != null && headParaList.isEmpty() &&) {
-            return body;
-        }
+//        if (headParaList != null && headParaList.isEmpty() &&) {
+//            return body;
+//        }
+        return body;
     }
 
     @Override

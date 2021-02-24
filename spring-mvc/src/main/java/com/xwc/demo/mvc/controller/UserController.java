@@ -24,7 +24,7 @@ public class UserController {
     @Encrypt
     @PostMapping
     @ApiOperation("新增用户")
-    public Object update(@RequestBody @Encrypt UserDto userDto) {
+    public Object update(@RequestBody @Encrypt(selfAdaption = false) UserDto userDto) {
 
         return userDto;
     }
