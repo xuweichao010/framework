@@ -28,7 +28,7 @@ public class EncryptResponseBody implements ResponseBodyAdvice {
             Class selectedConverterType, ServerHttpRequest request, ServerHttpResponse response) {
         Encrypt encrypt = returnType.getMethodAnnotation(Encrypt.class);
         if (encrypt != null) {
-            encryptService.encoder(body, request, response, encrypt);
+           return encryptService.encoder(body, request, response, encrypt);
         }
 
         return body;

@@ -25,5 +25,5 @@ public interface EncryptService {
      * @param response
      * @param encrypt
      */
-    void encoder(Object body, ServerHttpRequest request, ServerHttpResponse response, Encrypt encrypt);
+    Object encoder(Object body, ServerHttpRequest request, ServerHttpResponse response, Encrypt encrypt);
 }

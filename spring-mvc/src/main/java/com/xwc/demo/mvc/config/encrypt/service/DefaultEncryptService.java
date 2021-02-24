@@ -33,7 +33,7 @@ public class DefaultEncryptService implements EncryptService, EnvironmentAware {
         List<String> secretList = inputMessage.getHeaders().get(encryptProperty.getHeadName());
         if (secretList == null || secretList.isEmpty()) {
             // 自适应环境允许数据不加密传输
-            if (encryptProperty.getSelfAdaptionProfiles().contains(profilesActive)) {
+            if (encryptProperty.getSelfAdaptionProfiles().contains(profilesActive) && encrypt.selfAdaption()) {
                 return inputMessage;
             } else {
                 throw new RuntimeException("未发现数据秘钥信息");
@@ -63,8 +63,11 @@ public class DefaultEncryptService implements EncryptService, EnvironmentAware {
     }
 
     @Override
-    public void encoder(Object body, ServerHttpRequest request, ServerHttpResponse response, Encrypt encrypt) {
-
+    public Object encoder(Object body, ServerHttpRequest request, ServerHttpResponse response, Encrypt encrypt) {
+        List<String> headParaList = request.getHeaders().get(encryptProperty.getHeadName());
+        if (headParaList != null && headParaList.isEmpty() &&) {
+            return body;
+        }
     }
 
     @Override

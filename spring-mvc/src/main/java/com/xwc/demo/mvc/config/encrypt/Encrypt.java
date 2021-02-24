@@ -17,8 +17,11 @@ public @interface Encrypt {
 
     /**
      * 自动选择加密方案
-     *
-     * @return
      */
     SecretType type() default SecretType.AUTO;
+
+    /**
+     * 自适应功能 true:开启  false:关闭
+     */
+    boolean selfAdaption() default false;
 }
