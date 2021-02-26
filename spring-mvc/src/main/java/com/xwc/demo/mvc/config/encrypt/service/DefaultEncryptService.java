@@ -72,7 +72,6 @@ public class DefaultEncryptService implements EncryptService, EnvironmentAware {
         List<String> headParaList = request.getHeaders().get(encryptProperty.getHeadName());
         SecretType type;
         // 检查http请求信息中是否有加密头
-        // 如果没有加密头 而且强制性加密 则抛出异常
         if (headParaList == null || headParaList.isEmpty()) {
             if (!encrypt.selfAdaption() && encrypt.type() == SecretType.AUTO) {
                 throw new RuntimeException("未指定加密方式");
