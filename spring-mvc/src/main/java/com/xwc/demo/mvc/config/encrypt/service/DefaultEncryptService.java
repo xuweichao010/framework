@@ -27,6 +27,9 @@ import java.util.List;
 
 
 public class DefaultEncryptService implements EncryptService, EnvironmentAware {
+    /**
+     * 当前激活的环境
+     */
     private String profilesActive;
 
     @Autowired
