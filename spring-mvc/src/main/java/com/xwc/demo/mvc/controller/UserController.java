@@ -1,6 +1,8 @@
 package com.xwc.demo.mvc.controller;
 
+import com.xwc.demo.commons.mode.JsonMessage;
 import com.xwc.demo.mvc.config.encrypt.Encrypt;
+import com.xwc.demo.mvc.config.encrypt.model.SecretType;
 import com.xwc.demo.mvc.controller.user.UserDto;
 
 import io.swagger.annotations.Api;
@@ -21,11 +23,19 @@ import javax.servlet.http.HttpServletRequest;
 @Api("用户管理")
 public class UserController {
 
-    @Encrypt
+
     @PostMapping
     @ApiOperation("新增用户")
-    public Object update(@RequestBody @Encrypt(selfAdaption = false) UserDto userDto) {
+    @Encrypt(type = SecretType.BASE64)
+    public Object update(@RequestBody @Encrypt UserDto userDto) {
 
         return userDto;
+    }
+
+    @PostMapping("/1")
+    @ApiOperation("新增用户")
+    @Encrypt(type = SecretType.BASE64)
+    public JsonMessage<UserDto> update1(@RequestBody @Encrypt UserDto userDto) {
+        return JsonMessage.succeed(userDto);
     }
 }

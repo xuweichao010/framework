@@ -30,7 +30,6 @@ public class EncryptResponseBody implements ResponseBodyAdvice {
         if (encrypt != null) {
            return encryptService.encoder(body, request, response, encrypt);
         }
-
         return body;
     }
 }
